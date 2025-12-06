@@ -1,0 +1,2 @@
+C:\Users\mihir\AppData\Local\Temporary Projects\AnyStore\bin\Debug\AnyStore.exe.config
+C:\Users\mihir\OneDrive\Desktop\Dinod\Billing and Inventory Management System\Billing-and-Inventory-Management-System\AnyStore\AnyStore\bin\Debug\AnyStore.exe.config
