@@ -140,7 +140,7 @@ namespace AnyStore.DAL
 
             try
             {
-                string sql = "DELETE FRROM tbl_user WHERE id=@id";
+                string sql = "DELETE FROM tbl_user WHERE id=@id";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
