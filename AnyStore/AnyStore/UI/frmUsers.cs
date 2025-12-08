@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AnyStore.BLL;
+using AnyStore.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,9 @@ namespace AnyStore.UI
             InitializeComponent();
         }
 
+        userBLL u = new userBLL();
+        userDAL dal = new userDAL();
+
         private void pictureBoxClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -25,6 +30,40 @@ namespace AnyStore.UI
         private void lblTop_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            u.first_name = txtFirstName.Text;
+            u.last_name = txtLastName.Text;
+            u.email = txtEmail.Text;
+            u.username = txtUsername.Text;
+            u.password = txtPassword.Text;
+            u.contact = txtContact.Text;
+            u.address = txtAddress.Text;
+            u.gender = cmbGender.Text;
+            u.user_type = cmbUserType.Text;
+            u.added_date = DateTime.Now;
+            u.added_by = 1;
+
+            bool success = dal.Insert(u);
+
+            if (success == true)
+            {
+                MessageBox.Show("User successfully created.");
+            }else
+            {
+                MessageBox.Show("Failed to add new user");
+            }
+
+            DataTable dt = dal.Select();
+            dgvUsers.DataSource = dt;
+        }
+
+        private void frmUsers_Load(object sender, EventArgs e)
+        {
+            DataTable dt = dal.Select();
+            dgvUsers.DataSource = dt;
         }
     }
 }
