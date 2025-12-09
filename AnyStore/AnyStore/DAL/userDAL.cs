@@ -166,5 +166,31 @@ namespace AnyStore.DAL
             return isSuccess;
         }
         #endregion
+        #region Search User on Database usingkeyword
+        public DataTable Search(string keywords)
+        {
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            DataTable dt = new DataTable();
+            try
+            {
+                String sql = "SELECT * FROM tbl_user WHERE id LIKE '&"+keywords+"&' OR first_name LIKE '%"+keywords+ "%' OR last_name LIKE '%" + keywords + "%' OR username LIKE '%" + keywords+"%'";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                conn.Open();
+                adapter.Fill(dt);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+        }
+        #endregion
     }
 }

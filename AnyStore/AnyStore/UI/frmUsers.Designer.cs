@@ -312,9 +312,9 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(496, 86);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.ReadOnly = true;
             this.txtSearch.Size = new System.Drawing.Size(426, 30);
             this.txtSearch.TabIndex = 23;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // lblsearch
             // 
