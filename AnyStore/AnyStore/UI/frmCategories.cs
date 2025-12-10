@@ -123,5 +123,21 @@ namespace AnyStore.UI
                 MessageBox.Show("Fialed to Delete Category.");
             }
         }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string keywords = txtSearch.Text;
+
+            if (keywords != null)
+            {
+                DataTable dt = dal.Search(keywords);
+                dgvCategories.DataSource = dt;
+            }
+            else
+            {
+                DataTable dt = dal.Select();
+                dgvCategories.DataSource = dt;
+            }
+        }
     }
 }

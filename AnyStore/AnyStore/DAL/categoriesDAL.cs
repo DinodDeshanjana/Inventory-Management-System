@@ -169,5 +169,33 @@ namespace AnyStore.DAL
             return isSuccess;
         }
         #endregion
+        #region Method for Search Funtiionality
+        public DataTable Search(string Keywords)
+        {
+            SqlConnection conn = new SqlConnection(myconnstrng);
+
+            DataTable dt = new DataTable();
+
+            try
+            {
+                string sql = "SELECT * FROM tbl_categories WHERE id LIKE '%"+Keywords+"%' OR title LIKE '%"+Keywords+"%' OR discription LIKE '%"+Keywords+"%'";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                conn.Open();
+                adapter.Fill(dt);
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return dt;
+
+        }
+        #endregion
     }
 }

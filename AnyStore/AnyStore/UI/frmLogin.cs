@@ -39,7 +39,7 @@ namespace AnyStore.UI
 
             if (success == true)
             {
-                MessageBox.Show("Login Sucessful.");
+                
                 loggedIn = l.username;
 
 
