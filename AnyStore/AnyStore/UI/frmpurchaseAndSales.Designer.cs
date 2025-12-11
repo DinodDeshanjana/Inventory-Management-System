@@ -398,23 +398,23 @@
             this.pnlDatagridview.Controls.Add(this.lbldgvTitle);
             this.pnlDatagridview.Location = new System.Drawing.Point(12, 441);
             this.pnlDatagridview.Name = "pnlDatagridview";
-            this.pnlDatagridview.Size = new System.Drawing.Size(1020, 381);
+            this.pnlDatagridview.Size = new System.Drawing.Size(747, 381);
             this.pnlDatagridview.TabIndex = 5;
             // 
             // dgvAddedProducts
             // 
             this.dgvAddedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAddedProducts.Location = new System.Drawing.Point(27, 46);
+            this.dgvAddedProducts.Location = new System.Drawing.Point(66, 46);
             this.dgvAddedProducts.Name = "dgvAddedProducts";
             this.dgvAddedProducts.RowTemplate.Height = 24;
-            this.dgvAddedProducts.Size = new System.Drawing.Size(977, 322);
+            this.dgvAddedProducts.Size = new System.Drawing.Size(590, 287);
             this.dgvAddedProducts.TabIndex = 1;
             // 
             // lbldgvTitle
             // 
             this.lbldgvTitle.AutoSize = true;
             this.lbldgvTitle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbldgvTitle.Location = new System.Drawing.Point(23, 16);
+            this.lbldgvTitle.Location = new System.Drawing.Point(62, 0);
             this.lbldgvTitle.Name = "lbldgvTitle";
             this.lbldgvTitle.Size = new System.Drawing.Size(139, 23);
             this.lbldgvTitle.TabIndex = 0;
@@ -436,9 +436,9 @@
             this.pnlCalculation.Controls.Add(this.lblDiscount);
             this.pnlCalculation.Controls.Add(this.lblTotal);
             this.pnlCalculation.Controls.Add(this.lblCalculationtitel);
-            this.pnlCalculation.Location = new System.Drawing.Point(1038, 441);
+            this.pnlCalculation.Location = new System.Drawing.Point(848, 441);
             this.pnlCalculation.Name = "pnlCalculation";
-            this.pnlCalculation.Size = new System.Drawing.Size(400, 381);
+            this.pnlCalculation.Size = new System.Drawing.Size(590, 381);
             this.pnlCalculation.TabIndex = 6;
             // 
             // btnSave
@@ -446,7 +446,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(267, 319);
+            this.btnSave.Location = new System.Drawing.Point(369, 319);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(120, 49);
             this.btnSave.TabIndex = 12;
@@ -457,55 +457,55 @@
             // 
             this.txtReturnAmmount.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReturnAmmount.ForeColor = System.Drawing.Color.DarkRed;
-            this.txtReturnAmmount.Location = new System.Drawing.Point(174, 274);
+            this.txtReturnAmmount.Location = new System.Drawing.Point(209, 274);
             this.txtReturnAmmount.Name = "txtReturnAmmount";
             this.txtReturnAmmount.ReadOnly = true;
-            this.txtReturnAmmount.Size = new System.Drawing.Size(208, 30);
+            this.txtReturnAmmount.Size = new System.Drawing.Size(279, 30);
             this.txtReturnAmmount.TabIndex = 12;
             // 
             // txtPaidAmmount
             // 
             this.txtPaidAmmount.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaidAmmount.Location = new System.Drawing.Point(173, 227);
+            this.txtPaidAmmount.Location = new System.Drawing.Point(208, 227);
             this.txtPaidAmmount.Name = "txtPaidAmmount";
-            this.txtPaidAmmount.Size = new System.Drawing.Size(208, 30);
+            this.txtPaidAmmount.Size = new System.Drawing.Size(279, 30);
             this.txtPaidAmmount.TabIndex = 11;
             this.txtPaidAmmount.TextChanged += new System.EventHandler(this.txtPaidAmmount_TextChanged);
             // 
             // txtGrandTotal
             // 
             this.txtGrandTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGrandTotal.Location = new System.Drawing.Point(174, 184);
+            this.txtGrandTotal.Location = new System.Drawing.Point(209, 184);
             this.txtGrandTotal.Name = "txtGrandTotal";
             this.txtGrandTotal.ReadOnly = true;
-            this.txtGrandTotal.Size = new System.Drawing.Size(208, 30);
+            this.txtGrandTotal.Size = new System.Drawing.Size(279, 30);
             this.txtGrandTotal.TabIndex = 10;
             // 
             // txtVat
             // 
             this.txtVat.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtVat.Location = new System.Drawing.Point(173, 145);
+            this.txtVat.Location = new System.Drawing.Point(208, 145);
             this.txtVat.Name = "txtVat";
-            this.txtVat.Size = new System.Drawing.Size(208, 30);
+            this.txtVat.Size = new System.Drawing.Size(279, 30);
             this.txtVat.TabIndex = 9;
             this.txtVat.TextChanged += new System.EventHandler(this.txtVat_TextChanged);
             // 
             // txtDiscount
             // 
             this.txtDiscount.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiscount.Location = new System.Drawing.Point(174, 102);
+            this.txtDiscount.Location = new System.Drawing.Point(209, 102);
             this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(209, 30);
+            this.txtDiscount.Size = new System.Drawing.Size(280, 30);
             this.txtDiscount.TabIndex = 8;
             this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
             // 
             // txtSubTotal
             // 
             this.txtSubTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubTotal.Location = new System.Drawing.Point(174, 59);
+            this.txtSubTotal.Location = new System.Drawing.Point(209, 59);
             this.txtSubTotal.Name = "txtSubTotal";
             this.txtSubTotal.ReadOnly = true;
-            this.txtSubTotal.Size = new System.Drawing.Size(209, 30);
+            this.txtSubTotal.Size = new System.Drawing.Size(280, 30);
             this.txtSubTotal.TabIndex = 7;
             this.txtSubTotal.Text = "0";
             // 
