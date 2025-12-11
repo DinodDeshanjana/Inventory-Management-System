@@ -25,7 +25,7 @@ namespace AnyStore.UI
         }
 
         DeaCustDAL dcDAL = new DeaCustDAL();
-
+        productDAL pDAL = new productDAL();
         private void frmpurchaseAndSales_Load(object sender, EventArgs e)
         {
             string type = frmUserDashboard.transactionType;
@@ -51,6 +51,26 @@ namespace AnyStore.UI
             txtEmail.Text = dc.email;
             txtContact.Text = dc.contact;
             txtAddress.Text = dc.address;
+        }
+
+        private void txtSearchProduct_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtSearchProduct.Text;
+
+            if (keyword == "")
+            {
+                txtNameProduct.Text = "";
+                txtRate.Text = "";
+                txtQty.Text = "";
+                return;
+            }
+
+
+            productsBLL p = pDAL.GetproductsForTransaction(keyword);
+
+            txtNameProduct.Text = p.name;
+            txtInventory.Text = p.qty.ToString();
+            txtRate.Text = p.rate.ToString();
         }
     }
 }
