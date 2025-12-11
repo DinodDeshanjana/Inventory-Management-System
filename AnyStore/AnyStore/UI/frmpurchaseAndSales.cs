@@ -26,10 +26,18 @@ namespace AnyStore.UI
 
         DeaCustDAL dcDAL = new DeaCustDAL();
         productDAL pDAL = new productDAL();
+
+        DataTable transactionDT = new DataTable();
+
         private void frmpurchaseAndSales_Load(object sender, EventArgs e)
         {
             string type = frmUserDashboard.transactionType;
             lblTop.Text = type;
+
+            transactionDT.Columns.Add("Product Name");
+            transactionDT.Columns.Add("Rate");
+            transactionDT.Columns.Add("Quantity");
+            transactionDT.Columns.Add("Total");
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -71,6 +79,37 @@ namespace AnyStore.UI
             txtNameProduct.Text = p.name;
             txtInventory.Text = p.qty.ToString();
             txtRate.Text = p.rate.ToString();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            string productName = txtNameProduct.Text;
+            decimal Rate = decimal.Parse(txtRate.Text);
+            decimal Qty = decimal.Parse(txtQty.Text);
+
+            decimal Total = Rate * Qty;
+
+            decimal subtotal = decimal.Parse(txtSubTotal.Text);
+            subtotal = subtotal + Total;
+
+            if (productName == "")
+            {
+                MessageBox.Show("Select the Product first. Try Again.");
+            }
+            else
+            {
+                transactionDT.Rows.Add(productName, Rate, Qty,Total);
+
+                dgvAddedProducts.DataSource = transactionDT;
+
+                txtSubTotal.Text = subtotal.ToString();
+
+                txtSearchProduct.Text = "";
+                txtNameProduct.Text = "";
+                txtInventory.Text = "0.00";
+                txtRate.Text = "0.00";
+                txtQty.Text = "0.00";
+            }
         }
     }
 }
