@@ -35,5 +35,17 @@ namespace AnyStore
             frmDeaCust DeaCust = new frmDeaCust();
             DeaCust.Show();
         }
+
+        private void purchaseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmpurchaseAndSales purchase = new frmpurchaseAndSales();
+            purchase.Show();
+        }
+
+        private void salesFormsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmpurchaseAndSales purchase = new frmpurchaseAndSales();
+            purchase.Show();
+        }
     }
 }

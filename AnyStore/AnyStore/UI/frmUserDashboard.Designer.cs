@@ -32,6 +32,7 @@
             this.purchaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salesFormsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.delaerAndCutomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.labelAppheading = new System.Windows.Forms.Label();
             this.labelAppname2 = new System.Windows.Forms.Label();
             this.labelAppname = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.PanelFooter = new System.Windows.Forms.Panel();
             this.label1Footer = new System.Windows.Forms.Label();
-            this.delaerAndCutomerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStripTop.SuspendLayout();
             this.PanelFooter.SuspendLayout();
             this.SuspendLayout();
@@ -63,18 +63,27 @@
             this.purchaseToolStripMenuItem.Name = "purchaseToolStripMenuItem";
             this.purchaseToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.purchaseToolStripMenuItem.Text = "Purchase";
+            this.purchaseToolStripMenuItem.Click += new System.EventHandler(this.purchaseToolStripMenuItem_Click);
             // 
             // salesFormsToolStripMenuItem
             // 
             this.salesFormsToolStripMenuItem.Name = "salesFormsToolStripMenuItem";
             this.salesFormsToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
             this.salesFormsToolStripMenuItem.Text = "Sales";
+            this.salesFormsToolStripMenuItem.Click += new System.EventHandler(this.salesFormsToolStripMenuItem_Click);
             // 
             // inventoryToolStripMenuItem
             // 
             this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
             this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.inventoryToolStripMenuItem.Text = "Inventory";
+            // 
+            // delaerAndCutomerToolStripMenuItem
+            // 
+            this.delaerAndCutomerToolStripMenuItem.Name = "delaerAndCutomerToolStripMenuItem";
+            this.delaerAndCutomerToolStripMenuItem.Size = new System.Drawing.Size(155, 24);
+            this.delaerAndCutomerToolStripMenuItem.Text = "Delaer and Cutomer";
+            this.delaerAndCutomerToolStripMenuItem.Click += new System.EventHandler(this.delaerAndCutomerToolStripMenuItem_Click);
             // 
             // labelAppheading
             // 
@@ -147,13 +156,6 @@
             this.label1Footer.Size = new System.Drawing.Size(276, 23);
             this.label1Footer.TabIndex = 0;
             this.label1Footer.Text = "Developed By: Dinod Deshanjana";
-            // 
-            // delaerAndCutomerToolStripMenuItem
-            // 
-            this.delaerAndCutomerToolStripMenuItem.Name = "delaerAndCutomerToolStripMenuItem";
-            this.delaerAndCutomerToolStripMenuItem.Size = new System.Drawing.Size(155, 24);
-            this.delaerAndCutomerToolStripMenuItem.Text = "Delaer and Cutomer";
-            this.delaerAndCutomerToolStripMenuItem.Click += new System.EventHandler(this.delaerAndCutomerToolStripMenuItem_Click);
             // 
             // frmUserDashboard
             // 
