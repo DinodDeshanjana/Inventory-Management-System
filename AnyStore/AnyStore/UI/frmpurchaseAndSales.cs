@@ -111,5 +111,51 @@ namespace AnyStore.UI
                 txtQty.Text = "0.00";
             }
         }
+
+        private void txtDiscount_TextChanged(object sender, EventArgs e)
+        {
+            string value = txtDiscount.Text;
+
+            if (value == "")
+            {
+                MessageBox.Show("Please Add Discount First.");
+            }else
+            {
+                decimal subTotal = decimal.Parse(txtSubTotal.Text);
+                decimal discount = decimal.Parse(txtDiscount.Text);
+
+
+                decimal grandTotal = ((100 - discount) / 100) * subTotal;
+
+                txtGrandTotal.Text = grandTotal.ToString();
+            }
+        }
+
+        private void txtVat_TextChanged(object sender, EventArgs e)
+        {
+            string check = txtGrandTotal.Text;
+
+            if (check == "")
+            {
+                MessageBox.Show("Calculate the Discount and set the Grand Total First.");
+            }else
+            {
+                decimal previousGT = decimal.Parse(txtGrandTotal.Text);
+                decimal vat = decimal.Parse(txtVat.Text);
+                decimal granTotalWithVat = ((100 + vat) / 100) * previousGT;
+
+                txtGrandTotal.Text = granTotalWithVat.ToString();
+            }
+        }
+
+        private void txtPaidAmmount_TextChanged(object sender, EventArgs e)
+        {
+            decimal grandTotal = decimal.Parse(txtGrandTotal.Text);
+            decimal paidAmmount = decimal.Parse(txtPaidAmmount.Text);
+
+            decimal returnAmmount = paidAmmount - grandTotal;
+
+            txtReturnAmmount.Text = returnAmmount.ToString();
+        }
     }
 }
