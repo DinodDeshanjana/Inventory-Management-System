@@ -39,6 +39,7 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PanelFooter = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -152,12 +153,22 @@
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
+            // PanelFooter
+            // 
+            this.PanelFooter.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.PanelFooter.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelFooter.Location = new System.Drawing.Point(0, 533);
+            this.PanelFooter.Name = "PanelFooter";
+            this.PanelFooter.Size = new System.Drawing.Size(1018, 22);
+            this.PanelFooter.TabIndex = 9;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1018, 531);
+            this.ClientSize = new System.Drawing.Size(1018, 555);
+            this.Controls.Add(this.PanelFooter);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.cmbUsertype);
             this.Controls.Add(this.btnLogin);
@@ -190,5 +201,6 @@
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel PanelFooter;
     }
 }

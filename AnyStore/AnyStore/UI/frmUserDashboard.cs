@@ -18,6 +18,8 @@ namespace AnyStore
             InitializeComponent();
         }
 
+        public static string transactionType;
+
         private void frmUserDashboard_Load(object sender, EventArgs e)
         {
             lblLoginuser.Text = frmLogin.loggedIn;
@@ -38,14 +40,20 @@ namespace AnyStore
 
         private void purchaseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            transactionType = "Purchase";
             frmpurchaseAndSales purchase = new frmpurchaseAndSales();
             purchase.Show();
+
+
         }
 
         private void salesFormsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmpurchaseAndSales purchase = new frmpurchaseAndSales();
-            purchase.Show();
+
+            transactionType = "Sales";
+            frmpurchaseAndSales sales = new frmpurchaseAndSales();
+            sales.Show();
+
         }
     }
 }
