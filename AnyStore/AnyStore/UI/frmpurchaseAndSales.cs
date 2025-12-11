@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace AnyStore.UI
@@ -26,6 +27,9 @@ namespace AnyStore.UI
 
         DeaCustDAL dcDAL = new DeaCustDAL();
         productDAL pDAL = new productDAL();
+        userDAL uDAL = new userDAL();
+        transactionDAL tDAL = new transactionDAL();
+        transactionDetailDAL tdDAL = new transactionDetailDAL();
 
         DataTable transactionDT = new DataTable();
 
@@ -156,6 +160,73 @@ namespace AnyStore.UI
             decimal returnAmmount = paidAmmount - grandTotal;
 
             txtReturnAmmount.Text = returnAmmount.ToString();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            transactionsBLL transaction = new transactionsBLL();
+
+            transaction.type = lblTop.Text;
+
+            string deaCustName = txtName.Text;
+
+            DeaCustBLL dc = dcDAL.GetDeaCustIDFromName(deaCustName);
+
+
+            transaction.dea_cust_id = dc.id;
+            transaction.grandTotal = decimal.Parse(txtGrandTotal.Text);
+            transaction.transaction_date = DateTime.Now;
+            transaction.tax = decimal.Parse(txtVat.Text);
+            transaction.discount = decimal.Parse(txtDiscount.Text);
+
+            string username = frmLogin.loggedIn;
+            userBLL u = uDAL.GetIDfromUsername(username);
+
+            transaction.added_by = u.id;
+            transaction.transactionDetails = transactionDT;
+
+            bool success = false;
+
+            using(TransactionScope scope = new TransactionScope())
+            {
+                int transactionID = -1;
+
+                bool w = tDAL.Insert_Transaction(transaction, out transactionID);
+
+                for(int i = 0; i < transactionDT.Rows.Count; i++)
+                {
+                    tranactionDeatilBLL transactionDetail = new tranactionDeatilBLL();
+
+                    string ProductName = txtNameProduct.Text;
+
+                    productsBLL p = pDAL.GetProductIDFromName(ProductName);
+
+                    transactionDetail.product_id = p.id;
+                    transactionDetail.rate = decimal.Parse(transactionDT.Rows[i][1].ToString());
+                    transactionDetail.qty = decimal.Parse(transactionDT.Rows[i][2].ToString());
+                    transactionDetail.total = decimal.Parse(transactionDT.Rows[i][3].ToString());
+
+                    transactionDetail.dea_cust_id = dc.id;
+                    transactionDetail.added_date = DateTime.Now;
+                    transactionDetail.added_by = u.id;
+
+
+                    bool y = tdDAL.InsertTransactionDetail(transactionDetail);
+
+                    success = w && y;
+
+                    if (success == true)
+                    {
+                        MessageBox.Show("Transaction Completed Successfully.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Transaction Failed.");
+                    }
+
+                }
+
+            }
         }
     }
 }
