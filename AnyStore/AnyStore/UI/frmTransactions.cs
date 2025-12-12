@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnyStore.DAL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,34 @@ namespace AnyStore.UI
         public frmTransactions()
         {
             InitializeComponent();
+        }
+
+        transactionDAL tdal = new transactionDAL();
+
+        private void pictureBoxClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void frmTransactions_Load(object sender, EventArgs e)
+        {
+            DataTable dt = tdal.DisplayTransactions();
+            dgvTransaction.DataSource = dt;
+        }
+
+        private void cmbTransactionType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string type = cmbTransactionType.Text;
+
+            DataTable dt = tdal.DisplayTransactionBytype(type);
+            dgvTransaction.DataSource = dt;
+
+        }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+            DataTable dt = tdal.DisplayTransactions();
+            dgvTransaction.DataSource = dt;
         }
     }
 }
