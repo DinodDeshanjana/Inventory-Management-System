@@ -1,5 +1,6 @@
 ﻿using AnyStore.BLL;
 using AnyStore.DAL;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -234,6 +235,8 @@ namespace AnyStore.UI
                 if (success == true)
                 {
                     scope.Complete();
+
+
 
                     MessageBox.Show("Transaction Completed Successfully.");
                     dgvAddedProducts.DataSource = null;

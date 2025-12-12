@@ -65,7 +65,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.DarkViolet;
             this.panel1.Controls.Add(this.pictureBoxClose);
             this.panel1.Controls.Add(this.lblTop);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -92,18 +92,18 @@
             this.lblTop.ForeColor = System.Drawing.Color.White;
             this.lblTop.Location = new System.Drawing.Point(746, 9);
             this.lblTop.Name = "lblTop";
-            this.lblTop.Size = new System.Drawing.Size(77, 32);
+            this.lblTop.Size = new System.Drawing.Size(87, 32);
             this.lblTop.TabIndex = 0;
-            this.lblTop.Text = "Users";
+            this.lblTop.Text = "USERS";
             this.lblTop.Click += new System.EventHandler(this.lblTop_Click);
             // 
             // lblfirstname
             // 
             this.lblfirstname.AutoSize = true;
-            this.lblfirstname.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfirstname.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblfirstname.Location = new System.Drawing.Point(30, 143);
             this.lblfirstname.Name = "lblfirstname";
-            this.lblfirstname.Size = new System.Drawing.Size(93, 23);
+            this.lblfirstname.Size = new System.Drawing.Size(106, 25);
             this.lblfirstname.TabIndex = 1;
             this.lblfirstname.Text = "First Name";
             // 
@@ -128,10 +128,10 @@
             // lbllastname
             // 
             this.lbllastname.AutoSize = true;
-            this.lbllastname.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbllastname.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbllastname.Location = new System.Drawing.Point(30, 207);
             this.lbllastname.Name = "lbllastname";
-            this.lbllastname.Size = new System.Drawing.Size(91, 23);
+            this.lbllastname.Size = new System.Drawing.Size(103, 25);
             this.lbllastname.TabIndex = 3;
             this.lbllastname.Text = "Last Name";
             // 
@@ -147,10 +147,10 @@
             // lblemail
             // 
             this.lblemail.AutoSize = true;
-            this.lblemail.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblemail.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblemail.Location = new System.Drawing.Point(30, 270);
             this.lblemail.Name = "lblemail";
-            this.lblemail.Size = new System.Drawing.Size(51, 23);
+            this.lblemail.Size = new System.Drawing.Size(59, 25);
             this.lblemail.TabIndex = 5;
             this.lblemail.Text = "Email";
             // 
@@ -166,10 +166,10 @@
             // lblusername
             // 
             this.lblusername.AutoSize = true;
-            this.lblusername.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusername.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblusername.Location = new System.Drawing.Point(30, 329);
             this.lblusername.Name = "lblusername";
-            this.lblusername.Size = new System.Drawing.Size(87, 23);
+            this.lblusername.Size = new System.Drawing.Size(98, 25);
             this.lblusername.TabIndex = 7;
             this.lblusername.Text = "Username";
             // 
@@ -185,10 +185,10 @@
             // lblpassword
             // 
             this.lblpassword.AutoSize = true;
-            this.lblpassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblpassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblpassword.Location = new System.Drawing.Point(30, 384);
             this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(82, 23);
+            this.lblpassword.Size = new System.Drawing.Size(91, 25);
             this.lblpassword.TabIndex = 9;
             this.lblpassword.Text = "Password";
             // 
@@ -204,10 +204,10 @@
             // lblcontact
             // 
             this.lblcontact.AutoSize = true;
-            this.lblcontact.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcontact.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcontact.Location = new System.Drawing.Point(30, 440);
             this.lblcontact.Name = "lblcontact";
-            this.lblcontact.Size = new System.Drawing.Size(70, 23);
+            this.lblcontact.Size = new System.Drawing.Size(79, 25);
             this.lblcontact.TabIndex = 11;
             this.lblcontact.Text = "Contact";
             // 
@@ -224,20 +224,20 @@
             // lbladdress
             // 
             this.lbladdress.AutoSize = true;
-            this.lbladdress.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbladdress.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbladdress.Location = new System.Drawing.Point(30, 496);
             this.lbladdress.Name = "lbladdress";
-            this.lbladdress.Size = new System.Drawing.Size(70, 23);
+            this.lbladdress.Size = new System.Drawing.Size(80, 25);
             this.lbladdress.TabIndex = 13;
             this.lbladdress.Text = "Address";
             // 
             // lblgender
             // 
             this.lblgender.AutoSize = true;
-            this.lblgender.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblgender.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblgender.Location = new System.Drawing.Point(30, 611);
             this.lblgender.Name = "lblgender";
-            this.lblgender.Size = new System.Drawing.Size(66, 23);
+            this.lblgender.Size = new System.Drawing.Size(74, 25);
             this.lblgender.TabIndex = 15;
             this.lblgender.Text = "Gender";
             // 
@@ -269,10 +269,10 @@
             // lblusertype
             // 
             this.lblusertype.AutoSize = true;
-            this.lblusertype.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblusertype.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblusertype.Location = new System.Drawing.Point(30, 671);
             this.lblusertype.Name = "lblusertype";
-            this.lblusertype.Size = new System.Drawing.Size(85, 23);
+            this.lblusertype.Size = new System.Drawing.Size(95, 25);
             this.lblusertype.TabIndex = 17;
             this.lblusertype.Text = "User Type";
             // 
@@ -289,10 +289,10 @@
             // lbluserid
             // 
             this.lbluserid.AutoSize = true;
-            this.lbluserid.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbluserid.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbluserid.Location = new System.Drawing.Point(30, 88);
             this.lbluserid.Name = "lbluserid";
-            this.lbluserid.Size = new System.Drawing.Size(66, 23);
+            this.lbluserid.Size = new System.Drawing.Size(75, 25);
             this.lbluserid.TabIndex = 19;
             this.lbluserid.Text = "User ID";
             // 
@@ -319,10 +319,10 @@
             // lblsearch
             // 
             this.lblsearch.AutoSize = true;
-            this.lblsearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblsearch.Location = new System.Drawing.Point(387, 88);
             this.lblsearch.Name = "lblsearch";
-            this.lblsearch.Size = new System.Drawing.Size(61, 23);
+            this.lblsearch.Size = new System.Drawing.Size(69, 25);
             this.lblsearch.TabIndex = 22;
             this.lblsearch.Text = "Search";
             // 
@@ -330,11 +330,11 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(557, 733);
+            this.btnAdd.Location = new System.Drawing.Point(555, 733);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(157, 47);
+            this.btnAdd.Size = new System.Drawing.Size(157, 54);
             this.btnAdd.TabIndex = 24;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -344,11 +344,11 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(743, 733);
+            this.btnUpdate.Location = new System.Drawing.Point(741, 733);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(157, 47);
+            this.btnUpdate.Size = new System.Drawing.Size(157, 54);
             this.btnUpdate.TabIndex = 25;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -358,11 +358,11 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.Coral;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(934, 733);
+            this.btnDelete.Location = new System.Drawing.Point(932, 733);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(157, 47);
+            this.btnDelete.Size = new System.Drawing.Size(157, 54);
             this.btnDelete.TabIndex = 26;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -372,7 +372,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1489, 815);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);

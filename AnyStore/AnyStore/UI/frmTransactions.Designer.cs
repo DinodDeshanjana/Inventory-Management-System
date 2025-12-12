@@ -43,7 +43,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.DarkViolet;
             this.panel1.Controls.Add(this.pictureBoxClose);
             this.panel1.Controls.Add(this.lblTop);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -66,18 +66,18 @@
             // lblTop
             // 
             this.lblTop.AutoSize = true;
-            this.lblTop.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTop.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTop.ForeColor = System.Drawing.Color.White;
-            this.lblTop.Location = new System.Drawing.Point(544, 9);
+            this.lblTop.Location = new System.Drawing.Point(529, 9);
             this.lblTop.Name = "lblTop";
-            this.lblTop.Size = new System.Drawing.Size(198, 32);
+            this.lblTop.Size = new System.Drawing.Size(230, 38);
             this.lblTop.TabIndex = 0;
             this.lblTop.Text = "TRANSACTIONS";
             // 
             // dgvTransaction
             // 
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTransaction.Location = new System.Drawing.Point(63, 297);
+            this.dgvTransaction.Location = new System.Drawing.Point(132, 203);
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.RowTemplate.Height = 24;
             this.dgvTransaction.Size = new System.Drawing.Size(1120, 440);
@@ -86,38 +86,44 @@
             // lblTransactionsType
             // 
             this.lblTransactionsType.AutoSize = true;
-            this.lblTransactionsType.Location = new System.Drawing.Point(86, 103);
+            this.lblTransactionsType.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTransactionsType.Location = new System.Drawing.Point(127, 112);
             this.lblTransactionsType.Name = "lblTransactionsType";
-            this.lblTransactionsType.Size = new System.Drawing.Size(119, 17);
+            this.lblTransactionsType.Size = new System.Drawing.Size(162, 25);
             this.lblTransactionsType.TabIndex = 4;
             this.lblTransactionsType.Text = "Transaction Type";
             // 
             // cmbTransactionType
             // 
+            this.cmbTransactionType.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTransactionType.FormattingEnabled = true;
             this.cmbTransactionType.Items.AddRange(new object[] {
             "Purchase",
             "Sales"});
-            this.cmbTransactionType.Location = new System.Drawing.Point(265, 103);
+            this.cmbTransactionType.Location = new System.Drawing.Point(315, 112);
             this.cmbTransactionType.Name = "cmbTransactionType";
-            this.cmbTransactionType.Size = new System.Drawing.Size(242, 24);
+            this.cmbTransactionType.Size = new System.Drawing.Size(289, 31);
             this.cmbTransactionType.TabIndex = 5;
             this.cmbTransactionType.SelectedIndexChanged += new System.EventHandler(this.cmbTransactionType_SelectedIndexChanged);
             // 
             // btnAll
             // 
-            this.btnAll.Location = new System.Drawing.Point(629, 103);
+            this.btnAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAll.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAll.ForeColor = System.Drawing.Color.White;
+            this.btnAll.Location = new System.Drawing.Point(660, 112);
             this.btnAll.Name = "btnAll";
-            this.btnAll.Size = new System.Drawing.Size(91, 32);
+            this.btnAll.Size = new System.Drawing.Size(124, 50);
             this.btnAll.TabIndex = 6;
             this.btnAll.Text = "Show All";
-            this.btnAll.UseVisualStyleBackColor = true;
+            this.btnAll.UseVisualStyleBackColor = false;
             this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // frmTransactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.HighlightText;
             this.ClientSize = new System.Drawing.Size(1394, 766);
             this.Controls.Add(this.btnAll);
             this.Controls.Add(this.cmbTransactionType);
